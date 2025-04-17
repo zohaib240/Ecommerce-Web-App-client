@@ -2,13 +2,15 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './layout.jsx'
 import './index.css';  // Yeh ensure karo
-import Dashboard from "./pages/Dashboard.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
+import Profile from "./pages/profile.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import SingleProduct from "./pages/SingleProduct.jsx";
+
 import { store } from "./Config/redux/store/stgore.js";
 import { Provider } from "react-redux";
-import Profile from "./pages/profile.jsx";
 
 
 
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
   {
       path: 'dashboard',
       element: <Dashboard /> 
+    },
+    {
+      path: 'singleProduct/:id',
+      element: <SingleProduct /> 
     }
 
     
