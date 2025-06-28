@@ -8,6 +8,7 @@ import Home from "./pages/Home.jsx";
 import Profile from "./pages/profile.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
+import Singlecart from "./pages/Singlecart.jsx";
 
 import { store } from "./Config/redux/store/stgore.js";
 import { Provider } from "react-redux";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
     {
       path: 'singleProduct/:id',
       element: <SingleProduct /> 
+    },
+    {
+      path: 'singlecart/:id',
+      element: <Singlecart /> 
     }
 
     

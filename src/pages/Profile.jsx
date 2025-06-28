@@ -160,31 +160,33 @@ const Profile = () => {
       {/* 🔸 Products Section */}
       <div className="max-w-5xl mx-auto">
         <h3 className="text-2xl font-bold mb-4">Uploaded Products</h3>
+        {userProducts && userProducts.length > 0 ? (
+  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    {userProducts.map((product) => (
+      <Link
+        to={`/SingleProduct/${product._id}`}
+        key={product._id}
+        className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+      >
+        <img
+          src={product.postImage || "https://via.placeholder.com/300"}
+          alt={product.title}
+          className="h-48 w-full object-cover"
+        />
+        <div className="p-4">
+          <h4 className="text-lg font-semibold">{product.title}</h4>
+          <p className="text-gray-600 text-sm mb-2">
+            {product.description?.slice(0, 60)}...
+          </p>
+          <p className="text-green-600 font-bold">Rs. {product.price}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+) : (
+  <p className="text-gray-500">You have not posted any products yet.</p>
+)}
 
-        {userProducts.length === 0 ? (
-          <p className="text-gray-500">You have not posted any products yet.</p>
-        ) : (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {userProducts.map((product) => (
-              <Link
-                to={`/SingleProduct/${product._id}`}// ✅ Dynamic Link to Single Product Page
-                key={product._id}
-                className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform"
-              >
-                <img
-                  src={product.postImage || "https://via.placeholder.com/300"}
-                  alt={product.title}
-                  className="h-48 w-full object-cover"
-                />
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold">{product.title}</h4>
-                  <p className="text-gray-600 text-sm mb-2">{product.description.slice(0, 60)}...</p>
-                  <p className="text-green-600 font-bold">Rs. {product.price}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

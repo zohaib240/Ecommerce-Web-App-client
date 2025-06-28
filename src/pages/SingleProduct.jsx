@@ -31,7 +31,7 @@ console.log("useParams ID:", id);
           }
           
         );
-        console.log("Product API Response:", res.data); // ✅ yahan likho
+        console.log("Product API Response:", res); // ✅ yahan likho
         setProduct(res.data);
         setEditData({
           name: res.data.name || res.data.title,
