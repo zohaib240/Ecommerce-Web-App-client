@@ -8,10 +8,10 @@ import { MdLocationOn } from "react-icons/md";
 
 
 const heroImages = [
-  "public/assets/hero1.jpg",
-  "public/assets/hero2.png.jpg",
-  "public/assets/hero3.png.jpg",
-  "public/assets/video.mp4"
+  "/assets/hero1.jpg",
+  "/assets/hero2.png.jpg",
+  "/assets/hero3.png.jpg",
+  "/assets/video.mp4"
 ];
 
 const categories = [
