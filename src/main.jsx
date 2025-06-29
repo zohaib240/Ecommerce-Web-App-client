@@ -8,7 +8,7 @@ import Home from "./pages/Home.jsx";
 import Singlecart from "./pages/Singlecart.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
-import Profile from "./pages/profile.jsx";
+import Profile from "./pages/Profile.jsx";
 import { store } from "./Config/redux/store/stgore.js";
 import { Provider } from "react-redux";
 
