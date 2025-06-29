@@ -5,10 +5,10 @@ import './index.css';  // Yeh ensure karo
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
-import Profile from "./pages/SingleProduct.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
 import Singlecart from "./pages/Singlecart.jsx";
+import Profile from "./pages/Profile.jsx";
 
 import { store } from "./Config/redux/store/stgore.js";
 import { Provider } from "react-redux";
