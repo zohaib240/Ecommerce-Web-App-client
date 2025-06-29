@@ -8,10 +8,10 @@ import { MdLocationOn } from "react-icons/md";
 
 
 const heroImages = [
-  "src/assets/hero1.jpg",
-  "src/assets/hero2.png.jpg",
-  "src/assets/hero3.png.jpg",
-  "src/assets/video.mp4"
+  "public/assets/hero1.jpg",
+  "public/assets/hero2.png.jpg",
+  "public/assets/hero3.png.jpg",
+  "public/assets/video.mp4"
 ];
 
 const categories = [
@@ -123,52 +123,6 @@ const handleLike = async (productId) => {
     console.log("Like error:", error.response?.data || error.message);
   }
 };
-
-  // const [commentOpenFor, setCommentOpenFor] = useState(null);
-  // const [commentTexts, setCommentTexts] = useState({});
-
-  // // Comment icon click pe form toggle karne ka function
-  // const handleCommentIconClick = (productId) => {
-  //   setCommentOpenFor(commentOpenFor === productId ? null : productId);
-  // };
-
-  // // Textarea value update karne ka function
-  // const handleCommentChange = (productId, text) => {
-  //   setCommentTexts((prev) => ({ ...prev, [productId]: text }));
-  // };
-
-  // // Comment post karne ka function
-  // const handleCommentSubmit = async (productId) => {
-  //   const commentText = commentTexts[productId];
-  //   if (!commentText || commentText.trim() === "") return;
-
-  //   try {
-  //     const res = await fetch(
-  //       `http://localhost:5000/api/product/commentProduct/${productId}`,
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           Authorization: `Bearer ${user?.token}`,
-  //         },
-  //         body: JSON.stringify({ text: commentText }),
-  //       }
-  //     );
-
-  //     const data = await res.json();
-
-  //     if (res.ok) {
-  //       alert("Comment posted!");
-  //       setCommentTexts((prev) => ({ ...prev, [productId]: "" }));
-  //       setCommentOpenFor(null);
-  //       // Yahan apne product/comments refresh karne ka logic lagao
-  //     } else {
-  //       alert(data.message || "Failed to post comment");
-  //     }
-  //   } catch (error) {
-  //     alert("Something went wrong!");
-  //   }
-  // };
 
 
 return (
@@ -292,27 +246,7 @@ return (
                 )}
                 <span className="ml-1 text-[10px]">{item.likes?.length || 0}</span>
               </button>
-
-             
             </div>
-                          {/* Comment form, modern style, toggle
-              {commentOpenFor === item._id && (
-                <div className="mt-2 border rounded-md p-2 bg-gray-50 shadow-md">
-                  <textarea
-                    rows={2}
-                    className="w-full border border-gray-300 rounded-md p-2 text-sm resize-none focus:outline-blue-500"
-                    placeholder="Write a comment..."
-                    value={commentTexts[item._id] || ""}
-                    onChange={(e) => handleCommentChange(item._id, e.target.value)}
-                  />
-                  <button
-                    onClick={() => handleCommentSubmit(item._id)}
-                    className="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs py-1 rounded transition"
-                  >
-                    Post Comment
-                  </button> */}
-          {/* </div>
-              )} */}
 
           </div>
         </div>
