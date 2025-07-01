@@ -55,7 +55,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white border border-gray-200 p-10 rounded-2xl shadow-xl relative">
+      <div className="w-full max-w-md bg-white border border-gray-300 p-10 rounded-2xl shadow-xl relative">
         <div className="absolute -top-12 right-8 w-24 h-24 bg-[#d32e2e22] blur-2xl rounded-full z-0 animate-pulse"></div>
 
         <h2 className="text-3xl font-bold text-center text-[#d32e2e] mb-8 relative z-10">Login</h2>
@@ -66,14 +66,14 @@ const Login = () => {
             ref={email}
             placeholder="Email"
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
+            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
           />
           <input
             type="password"
             ref={password}
             placeholder="Password"
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
+            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
           />
           <button
             type="submit"
