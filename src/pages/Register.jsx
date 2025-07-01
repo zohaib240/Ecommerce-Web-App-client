@@ -123,7 +123,7 @@ const Register = () => {
         required
         placeholder="Enter your first name"
         ref={userName}
-        className="input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -131,7 +131,7 @@ const Register = () => {
         type="text"
         placeholder="Enter your last name"
         ref={fullName}
-        className="input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black not-only:input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -140,7 +140,7 @@ const Register = () => {
         required
         placeholder="Enter your email"
         ref={email}
-        className="input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black not-only:input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -149,7 +149,7 @@ const Register = () => {
         required
         placeholder="Enter your password"
         ref={password}
-        className="input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -158,7 +158,7 @@ const Register = () => {
         required
         placeholder="Enter your mobile number"
         ref={mobileNumber}
-        className="input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -167,7 +167,7 @@ const Register = () => {
         required
         accept="image/*"
         onChange={handleImageChange}
-        className="file-input w-full border border-gray-400 shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black file-input w-full border border-gray-400 shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="flex justify-center">

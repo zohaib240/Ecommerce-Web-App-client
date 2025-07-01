@@ -66,14 +66,14 @@ const Login = () => {
             ref={email}
             placeholder="Email"
             required
-            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
+            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 text-black transition-all"
           />
           <input
             type="password"
             ref={password}
             placeholder="Password"
             required
-            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 transition-all"
+            className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d32e2e] placeholder-gray-500 text-black transition-all"
           />
           <button
             type="submit"

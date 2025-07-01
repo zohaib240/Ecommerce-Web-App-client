@@ -97,7 +97,7 @@ const Dashboard = () => {
           type="text"
           ref={Name}
           placeholder="Product Name"
-          className="input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
+          className="text-black input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
           required
         />
 
@@ -105,7 +105,7 @@ const Dashboard = () => {
           type="text"
           ref={Description}
           placeholder="Description"
-          className="input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
+          className="text-black input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
           required
         />
 
@@ -113,7 +113,7 @@ const Dashboard = () => {
           type="number"
           ref={Price}
           placeholder="Price"
-          className="input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
+          className="text-black input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
           required
         />
 
@@ -121,7 +121,7 @@ const Dashboard = () => {
           type="number"
           ref={mobileNumber}
           placeholder="Mobile Number"
-          className="input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
+          className="text-black input input-bordered w-full mb-4 transition-all duration-300 focus:ring-2 focus:ring-[#d32e2e]"
           required
         />
 
