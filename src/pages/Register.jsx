@@ -131,7 +131,7 @@ const Register = () => {
         type="text"
         placeholder="Enter your last name"
         ref={fullName}
-        className="text-black not-only:input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
@@ -140,7 +140,7 @@ const Register = () => {
         required
         placeholder="Enter your email"
         ref={email}
-        className="text-black not-only:input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
+        className="text-black input w-full border border-gray-400 focus:border-[#d32e2e] shadow-sm hover:shadow-md transition-shadow duration-300"
       />
     </div>
     <div className="mb-4">
