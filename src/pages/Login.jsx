@@ -1,7 +1,7 @@
 import  { useRef, useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../Config/redux/reducers/userSlice.js';
 
@@ -83,10 +83,9 @@ const Login = () => {
             {loading ? <span className="loading loading-spinner text-white" /> : "Login"}
           </button>
         </form>
-
-        <p className="text-sm text-gray-600 text-center mt-6">
-          Don’t have an account? <a href="/Register" className="text-[#d32e2e] hover:underline">Register here</a>
-        </p>
+          <p className="text-sm text-gray-600 text-center mt-6">
+         Don’t have an account? <Link to="/Register" className="text-[#d32e2e] hover:underline">Register here</Link>
+          </p>
       </div>
     </div>
   );
