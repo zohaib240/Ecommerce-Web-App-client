@@ -56,10 +56,7 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white border border-gray-300 p-10 rounded-2xl shadow-xl relative">
-        <div className="absolute -top-12 right-8 w-24 h-24 bg-[#d32e2e22] blur-2xl rounded-full z-0 animate-pulse"></div>
-
         <h2 className="text-3xl font-bold text-center text-[#d32e2e] mb-8 relative z-10">Login</h2>
-
         <form onSubmit={handleLogin} className="space-y-5 z-10 relative">
           <input
             type="email"
