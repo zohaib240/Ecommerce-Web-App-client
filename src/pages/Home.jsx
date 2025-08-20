@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaCommentDots, FaHeart, FaRegHeart } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import ClientSection from "../components/ClientSection";
 
 
 
@@ -148,6 +149,8 @@ return (
         />
       )}
     </div>
+{/* clientSection  */}
+<ClientSection />
 
     {/* Categories */}
     <div className="flex flex-wrap justify-center gap-4 mb-8">
