@@ -19,7 +19,56 @@ const Register = () => {
   console.log(handleImageChange);
   
 
-  const handleRegister = async (event) => {
+  // const handleRegister = async (event) => {
+  //   event.preventDefault();
+  //   setLoading(true);
+
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append('fullName', fullName.current.value);
+  //     formData.append('userName', userName.current.value);
+  //     formData.append('email', email.current.value);
+  //     formData.append('password', password.current.value);
+  //     formData.append('mobileNumber', mobileNumber.current.value);
+  //     if (image) {
+  //       formData.append('image', image);
+  //     }
+  //     fullName.current.value = "";
+  //     userName.current.value = "";
+  //     email.current.value = "";
+  //     password.current.value = "";
+      
+
+  //     const response = await axios.post('https://ecommerce-web-app-server.vercel.app/api/v1/auth/register', formData, {
+  //       headers: { 'Content-Type': 'multipart/form-data' },
+  //       withCredentials: true, // ✅ Important for authentication
+        
+  //     });
+
+  //     console.log(response.data);
+
+      
+  //     Swal.fire({
+  //       icon: 'success',
+  //       title: 'Success!',
+  //       text: 'Registration successful!',
+  //     }).then(() => {
+  //       navigate('/login'); 
+  //     });
+
+  //   } catch (error) {
+  //     console.error("Registration Error:", error.response?.data); // ✅ Debugging Step
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'Oops...',
+  //       text: 'Registration failed. User already Exist.',
+  //     });
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+const handleRegister = async (event) => {
     event.preventDefault();
     setLoading(true);
 
@@ -58,15 +107,34 @@ const Register = () => {
 
     } catch (error) {
       console.error("Registration Error:", error.response?.data); // ✅ Debugging Step
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Registration failed. User already Exist.',
-      });
+      
+      // Check if user already exists
+      const errorMessage = error.response?.data?.message || '';
+      const isUserExists = errorMessage.toLowerCase().includes('exist') || 
+                          errorMessage.toLowerCase().includes('already') ||
+                          error.response?.status === 409; // 409 is Conflict status code
+      
+      if (isUserExists) {
+        Swal.fire({
+          icon: 'error',
+          title: 'User Already Exists',
+          text: 'This email or username is already registered. Please try logging in or use different credentials.',
+        });
+      } else {
+        // Server error or other errors
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Failed',
+          text: error.response?.data?.message || 'Something went wrong. Please try again later.',
+        });
+      }
     } finally {
       setLoading(false);
     }
   };
+
+
+
 
   return (
     <>

@@ -150,22 +150,23 @@ return (
       )}
     </div>
 {/* clientSection  */}
-<ClientSection />
+
+     <ClientSection />
 
     {/* Categories */}
     <div className="flex flex-wrap justify-center gap-4 mb-8">
       {categories.map((category) => (
-        <button
+       <button
           key={category}
           onClick={() => {
             setSelectedCategory(category);
             setPage(1);
           }}
-          className={`px-4 py-2 rounded-full border ${
+          className={`px-4 py-2 rounded-full border cursor-pointer ${
             selectedCategory === category
               ? "bg-blue-600 text-white"
-              : "bg-white text-blue-600"
-          } transition-colors`}
+              : "bg-white text-blue-600 hover:bg-blue-600 hover:text-white"
+          } transition-colors duration-300`}
         >
           {category}
         </button>
@@ -176,22 +177,38 @@ return (
 
 <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 px-4">
   {products.map((item) => {
+    // const createdAt = new Date(item.createdAt);
+    // const now = new Date();
+    // const diffMs = now - createdAt;
+
+    // const diffMins = Math.floor(diffMs / (1000 * 60));
+    // const diffHrs = Math.floor(diffMins / 60);
+    // const diffDays = Math.floor(diffHrs / 24);
+
+    // const timeAgo =
+    //   diffDays > 0
+    //     ? `${diffDays} days ago`
+    //     : diffHrs > 0
+    //     ? `${diffHrs} hours ago`
+    //     : diffMins > 0
+    //     ? `${diffMins} minutes ago`
+    //     : "Just now";
     const createdAt = new Date(item.createdAt);
-    const now = new Date();
-    const diffMs = now - createdAt;
+const now = new Date();
+const diffMs = now - createdAt;
 
-    const diffMins = Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math.floor(diffMins / 60);
-    const diffDays = Math.floor(diffHrs / 24);
+const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+const diffMonths = Math.floor(diffDays / 30);
+const diffYears = Math.floor(diffDays / 365);
 
-    const timeAgo =
-      diffDays > 0
-        ? `${diffDays} days ago`
-        : diffHrs > 0
-        ? `${diffHrs} hours ago`
-        : diffMins > 0
-        ? `${diffMins} minutes ago`
-        : "Just now";
+const timeAgo =
+  diffYears > 0
+    ? `${diffYears} ${diffYears === 1 ? 'year' : 'years'} ago`
+    : diffMonths > 0
+    ? `${diffMonths} ${diffMonths === 1 ? 'month' : 'months'} ago`
+    : diffDays > 0
+    ? `${diffDays} ${diffDays === 1 ? 'day' : 'days'} ago`
+    : "Just now";
 
     return (
       <Link to={`/singlecart/${item._id}`} key={item._id}>
